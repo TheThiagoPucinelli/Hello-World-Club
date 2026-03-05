@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hello World Club | Formulário</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*{
+font-family:'Inter',sans-serif;
+}
+
+.slider-gradient{
+background: linear-gradient(
+90deg,
+#ff3b30,
+#ff9500,
+#ffd60a,
+#30d158,
+#16A085
+);
+}
+
+.slider-gradient::-webkit-slider-thumb{
+appearance:none;
+width:18px;
+height:18px;
+background:white;
+border-radius:50%;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body class="bg-gradient-to-br from-[#16A085] to-[#1E3A5F] text-[#E8F1F2]">
+
+    <!-- NAVBAR -->
+
+<header class="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+
+    <a href="/index.html" class="flex items-center gap-1">
+      <h1 class="font-bold text-lg text-white">Hello World</h1>
+      <h1 class="font-bold text-lg text-black">.</h1>
+      <h1 class="font-bold text-lg text-red-500">Club</h1>
+    </a>
+
+    <nav class="hidden md:flex gap-8 font-medium text-white">
+      <a href="/index.html#como-funciona" class="hover:text-[#16A085]">Método</a>
+      <a href="/index.html#planos" class="hover:text-[#16A085]">Planos</a>
+      <a href="/index.html#beneficio" class="hover:text-[#16A085]">Benefícios</a>
+      <a href="/form.html" class="hover:text-[#16A085]">Formulário</a>
+      <a href="/index.html#faq" class="hover:text-[#16A085]">FAQ</a>
+    </nav>
+
+    <div id="hamburger" class="md:hidden cursor-pointer">
+      <div class="bar bar1 w-6 h-0.5 bg-white mb-1"></div>
+      <div class="bar bar2 w-6 h-0.5 bg-white mb-1"></div>
+      <div class="bar bar3 w-6 h-0.5 bg-white"></div>
+    </div>
+
+  </div>
+
+  <div id="mobileMenu" class="hidden flex-col text-center pb-6 md:hidden text-white">
+    <a href="/index.html#como-funciona" class="py-3 border-t border-[#1F4A5F]">Método</a>
+    <a href="/index.html#planos" class="py-3 border-t border-[#1F4A5F]">Planos</a>
+    <a href="/index.html#beneficio" class="py-3 border-t border-[#1F4A5F]">Benefícios</a>
+    <a href="/form.html" class="py-3 border-t border-[#1F4A5F]">Formulário</a>
+    <a href="/index.html#faq" class="py-3 border-t border-[#1F4A5F]">FAQ</a>
+  </div>
+
+</header>
+
+
+<!-- FORM -->
+
+<section class="pt-32 pb-20 px-6">
+
+<div class="max-w-3xl mx-auto">
+
+<div class="bg-[#112B3C] p-10 rounded-xl border border-[#1F4A5F] 
+transition-all duration-500 
+hover:scale-[1.02] 
+hover:shadow-[0_0_35px_rgba(22,160,133,0.45)]">
+
+<h1 class="text-3xl font-bold mb-6 text-center">
+Formulário Hello World Club
+</h1>
+
+<p class="text-[#A7BDC7] mb-10 text-center">
+Descubra a stack, senioridade e disponibilidade de um programador interessado em Pair Programming.
+</p>
+
+<form class="space-y-10">
+
+<!-- STACK PRINCIPAL -->
+
+<div>
+<label class="font-semibold block mb-3">
+Qual é a sua stack de tecnologia principal? *
+</label>
+
+<div class="space-y-2 text-[#A7BDC7]">
+
+<label class="block"><input type="radio" name="stack"> Frontend (HTML, CSS, JavaScript, React, Vue, Angular)</label>
+
+<label class="block"><input type="radio" name="stack"> Backend (Node.js, Python, Java, C#, PHP, Ruby)</label>
+
+<label class="block"><input type="radio" name="stack"> Mobile (Android, iOS, React Native, Flutter)</label>
+
+<label class="block"><input type="radio" name="stack"> DevOps/Cloud (AWS, Azure, GCP, Docker, Kubernetes)</label>
+
+<label class="block"><input type="radio" name="stack"> Banco de Dados (SQL, NoSQL, MongoDB, PostgreSQL)</label>
+
+<label class="block"><input type="radio" name="stack"> Full Cycle</label>
+
+<label class="block"><input type="radio" name="stack"> Outra</label>
+
+</div>
+
+<input class="mt-4 w-full bg-[#0B1F2E] border border-[#1F4A5F] rounded p-3" placeholder="Se marcou outra, especifique">
+</div>
+
+
+<!-- LINGUAGENS -->
+
+<div>
+
+<label class="font-semibold block mb-3">
+Quais linguagens fazem parte da sua stack *
+</label>
+
+<div class="grid grid-cols-2 gap-2 text-[#A7BDC7]">
+
+<label><input type="checkbox"> C</label>
+<label><input type="checkbox"> C#</label>
+<label><input type="checkbox"> C++</label>
+<label><input type="checkbox"> Java</label>
+<label><input type="checkbox"> JS</label>
+<label><input type="checkbox"> PHP</label>
+<label><input type="checkbox"> Python</label>
+<label><input type="checkbox"> Ruby</label>
+<label><input type="checkbox"> Go</label>
+<label><input type="checkbox"> Kotlin</label>
+
+</div>
+
+</div>
+
+
+<!-- FRAMEWORKS -->
+
+<div>
+
+<label class="font-semibold block mb-3">
+Usa quais frameworks? (se não usar deixe em vazio)
+</label>
+
+<input class="w-full bg-[#0B1F2E] border border-[#1F4A5F] rounded p-3">
+
+</div>
+<!-- CARREIRA / FAQ -->
+
+<div class="bg-[#0B1F2E] border border-[#1F4A5F] rounded-lg p-6 space-y-6">
+
+<h2 class="text-2xl font-bold text-[#16A085]">
+Carreira
+</h2>
+
+<p class="text-[#A7BDC7]">
+A partir daqui você vai informar sua experiência. Caso reste alguma dúvida,
+a seguir temos um FAQ com perguntas frequentes.
+</p>
+
+<div class="space-y-4 text-[#A7BDC7]">
+
+<div>
+<h3 class="font-semibold text-white">
+Sou iniciante, o que eu coloco?
+</h3>
+<p>
+Junior, pois o ideal é interagir com quem tem mais experiência.  
+Não tenha medo de julgamento — o Club é um lugar de críticas construtivas.  
+
+Aos programadores mais avançados a mensagem que fica é:  
+seja legal com quem não sabe, pois eventualmente você pode estar nessa posição.
+Atitudes que vão contra os valores do club não serão aceitas.
+</p>
+</div>
+
+<div>
+<h3 class="font-semibold text-white">
+Não tenho carreira profissional ainda, o Club é pra mim?
+</h3>
+<p>
+Com certeza. Além de um espaço para compartilhar e receber conhecimento,
+é também um espaço de desenvolvimento profissional.
+</p>
+</div>
+
+<div>
+<h3 class="font-semibold text-white">
+Não sigo nenhuma prática de desenvolvimento. Como preencho o formulário?
+</h3>
+<p>
+Marque as que eventualmente você deseja seguir.  
+O sistema vai te reunir com quem utiliza essa prática.
+
+Caso não deseje abordá-las, comunique quando estiver em contato
+com o parceiro(a) antes da sessão.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- SENIORIDADE -->
+
+<div>
+
+<label class="font-semibold block mb-3">
+Qual é a sua senioridade atual como programador? *
+</label>
+
+<div class="space-y-2 text-[#A7BDC7]">
+
+<label><input type="radio" name="senioridade"> Júnior (menos de 2 anos)</label>
+<label><input type="radio" name="senioridade"> Pleno (2 a 5 anos)</label>
+<label><input type="radio" name="senioridade"> Sênior (mais de 5 anos)</label>
+<label><input type="radio" name="senioridade"> Tech Lead / Arquiteto</label>
+
+</div>
+
+</div>
+
+
+<!-- TEMPO PROFISSIONAL -->
+
+<div>
+
+<label class="font-semibold block mb-3">
+Há quanto tempo você programa profissionalmente? *
+</label>
+
+<select class="w-full bg-[#0B1F2E] border border-[#1F4A5F] rounded p-3">
+
+<option>Escolher</option>
+<option>Menos de 1 ano</option>
+<option>1 a 2 anos</option>
+<option>2 a 5 anos</option>
+<option>Mais de 5 anos</option>
+
+</select>
+
+</div>
+
+
+<!-- DISPONIBILIDADE -->
+<div>
+
+<label class="font-semibold block mb-5">
+Qual a sua disponibilidade semanal para sessões de Pair Programming?
+</label>
+
+<div class="overflow-x-auto">
+
+<table class="w-full text-left border-separate border-spacing-y-2">
+
+<thead class="text-[#A7BDC7] text-sm">
+<tr>
+<th></th>
+<th class="text-center">Manhã (até 12h)</th>
+<th class="text-center">Tarde (12h às 18h)</th>
+<th class="text-center">Noite (após 18h)</th>
+</tr>
+</thead>
+
+<tbody class="text-[#E8F1F2]">
+
+<tr class="bg-[#0B1F2E] border border-[#1F4A5F]">
+<td class="p-3">Segunda-feira</td>
+<td class="text-center"><input type="radio" name="seg"></td>
+<td class="text-center"><input type="radio" name="seg"></td>
+<td class="text-center"><input type="radio" name="seg"></td>
+</tr>
+
+<tr class="bg-[#0B1F2E]">
+<td class="p-3">Terça-feira</td>
+<td class="text-center"><input type="radio" name="ter"></td>
+<td class="text-center"><input type="radio" name="ter"></td>
+<td class="text-center"><input type="radio" name="ter"></td>
+</tr>
+
+<tr class="bg-[#0B1F2E]">
+<td class="p-3">Quarta-feira</td>
+<td class="text-center"><input type="radio" name="qua"></td>
+<td class="text-center"><input type="radio" name="qua"></td>
+<td class="text-center"><input type="radio" name="qua"></td>
+</tr>
+
+<tr class="bg-[#0B1F2E]">
+<td class="p-3">Quinta-feira</td>
+<td class="text-center"><input type="radio" name="qui"></td>
+<td class="text-center"><input type="radio" name="qui"></td>
+<td class="text-center"><input type="radio" name="qui"></td>
+</tr>
+
+<tr class="bg-[#0B1F2E]">
+<td class="p-3">Sexta-feira</td>
+<td class="text-center"><input type="radio" name="sex"></td>
+<td class="text-center"><input type="radio" name="sex"></td>
+<td class="text-center"><input type="radio" name="sex"></td>
+</tr>
+
+<tr class="bg-[#0B1F2E]">
+<td class="p-3">Sábado</td>
+<td class="text-center"><input type="radio" name="sab"></td>
+<td class="text-center"><input type="radio" name="sab"></td>
+<td class="text-center"><input type="radio" name="sab"></td>
+</tr>
+
+<tr class="bg-[#0B1F2E]">
+<td class="p-3">Domingo</td>
+<td class="text-center"><input type="radio" name="dom"></td>
+<td class="text-center"><input type="radio" name="dom"></td>
+<td class="text-center"><input type="radio" name="dom"></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- DURAÇÃO -->
+
+<div>
+<label class="font-semibold block mb-3">
+Qual a duração ideal para uma sessão de Pair Programming? <br>(Idealmente coloque mais que 1h)
+</label>
+<input 
+type="time"
+class="w-full bg-[#0B1F2E] border border-[#1F4A5F] rounded p-3 text-white">
+</div>
+
+
+<!-- CONTATOS -->
+
+<div>
+<label class="font-semibold block mb-3">
+Seu contato de WhatsApp (com DDD) *
+</label>
+<input class="w-full bg-[#0B1F2E] border border-[#1F4A5F] rounded p-3">
+</div>
+
+<div>
+<label class="font-semibold block mb-3">
+Seu usuário no Discord *
+</label>
+<input class="w-full bg-[#0B1F2E] border border-[#1F4A5F] rounded p-3">
+</div>
+
+
+<div>
+<label class="font-semibold block mb-3">
+Email *
+</label>
+<input type="email" class="w-full bg-[#0B1F2E] border border-[#1F4A5F] rounded p-3">
+</div>
+
+
+<!-- INTERESSE -->
+
+<div>
+<label class="font-semibold block mb-3">
+Classifique seu nível de interesse em Pair Programming
+</label>
+<input type="range" min="1" max="5"
+class="w-full h-2 rounded-lg appearance-none cursor-pointer slider-gradient">
+<div class="flex justify-between text-sm text-[#A7BDC7]">
+<span>1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span>5</span>
+</div>
+
+</div>
+<!-- BOTÃO -->
+<button class="w-full bg-[#16A085] hover:bg-[#0E7C66] py-4 rounded-lg font-semibold transition">
+Enviar
+</button>
+</form>
+</div>
+</div>
+</section>
+
+
+<script>
+
+/* hamburger */
+
+const hamburger=document.getElementById("hamburger")
+const mobileMenu=document.getElementById("mobileMenu")
+
+hamburger.onclick=()=>{
+
+hamburger.classList.toggle("open")
+mobileMenu.classList.toggle("hidden")
+
+}
+
+
+/* scroll animation */
+
+function reveal(){
+
+document.querySelectorAll(".reveal").forEach(el=>{
+
+const windowHeight=window.innerHeight
+const elementTop=el.getBoundingClientRect().top
+const visible=120
+
+if(elementTop<windowHeight-visible){
+
+el.classList.add("active")
+
+}
+
+})
+
+}
+
+window.addEventListener("scroll",reveal)
+
+reveal()
+
+</script>
+</body>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="YKeXTy9dM19-yCWTyftLUXkKs-q2dNEfbWl7rwKtPEk">
+  <title>Hello World Club | Mentoria e Pair Programming para Devs</title>
+  <meta name="description" content="Acelere sua senioridade no Hello World Club. Conectamos desenvolvedores para sessões de pair programming real, code review e networking técnico.">
+  <meta name="keywords" content="programação, pair programming, mentoria dev, code review, comunidade tech, aprender a programar">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hello-world-club.blogspot.com/">
+  <meta name="theme-color" content="#0B1F2E">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hello World Club | Mentoria e Pair Programming Real">
+  <meta property="og:description" content="Saia da teoria e acelere sua senioridade. Conectamos você a outros devs para codar e revisar projetos em conjunto.">
+  <meta property="og:url" content="https://hello-world-club.blogspot.com/">
+  <meta property="og:image" content="https://blogger.googleusercontent.com/img/a/AVvXsEiCn8vPcPN-uUvjPc6LvmH-WQ8KNU4DwC3WNShNwmOmSlVYiBC6elvLDbQkrVIRZ3Y8B1H1HC0LxVh5BvbGvrB2e6mfC5W4H-sG6liv8mLhuOAgdu_rlS1Qm17zTTD7vNWTzKEQ-n2vUF6njzKmRvf6XPa2OAf8H13dxiU1pTAYBG6WxCCPJKnlfq8K-LU">
+  
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    
+    * {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+   .hero-bg{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+opacity:0.25;
+pointer-events:none;
+}
+
+.hero-bg svg{
+width:100%;
+height:100%;
+}
+
+.orbit{
+fill:none;
+stroke:white;
+stroke-width:1;
+stroke-dasharray:1 3;
+animation: orbitMove 12s linear infinite;
+}
+
+.delay1{
+animation-delay:2s;
+}
+
+.delay2{
+animation-delay:4s;
+}
+
+@keyframes orbitMove{
+
+0%{
+transform:rotate(0deg);
+transform-origin:600px 400px;
+}
+
+100%{
+transform:rotate(360deg);
+transform-origin:600px 400px;
+}
+
+}
+
+    
+  </style>
+</head>
+<body class="bg-gradient-to-br from-[#16A085] to-[#1E3A5F] text-[#E8F1F2] antialiased">
+
+   <!-- NAVBAR -->
+
+<header class="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+
+    <a href="#" class="flex items-center gap-1 transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(22,160,133,0.8)]">
+  <h1 class="font-bold text-lg text-white transition-colors duration-300 hover:text-[#16A085]">Hello World</h1>
+  <h1 class="font-bold text-lg text-black transition-colors duration-300 hover:text-white">.</h1>
+  <h1 class="font-bold text-lg text-red-500 transition-colors duration-300 hover:text-red-400">Club</h1>
+</a>
+
+    <nav class="hidden md:flex gap-8 font-medium text-white">
+      <a href="#como-funciona" class="hover:text-[#16A085]">Método</a>
+      <a href="#planos" class="hover:text-[#16A085]">Planos</a>
+      <a href="#beneficio" class="hover:text-[#16A085]">Benefícios</a>
+      <a href="/form.html" class="hover:text-[#16A085]">Formulário</a>
+      <a href="#FAQ" class="hover:text-[#16A085]">FAQ</a>
+    </nav>
+
+    <div id="hamburger" class="md:hidden cursor-pointer">
+      <div class="bar bar1 w-6 h-0.5 bg-white mb-1"></div>
+      <div class="bar bar2 w-6 h-0.5 bg-white mb-1"></div>
+      <div class="bar bar3 w-6 h-0.5 bg-white"></div>
+    </div>
+
+  </div>
+
+  <div id="mobileMenu" class="hidden flex-col text-center pb-6 md:hidden text-white">
+    <a href="#como-funciona" class="py-3 border-t border-[#1F4A5F]">Método</a>
+    <a href="#planos" class="py-3 border-t border-[#1F4A5F]">Planos</a>
+    <a href="#beneficio" class="py-3 border-t border-[#1F4A5F]">Benefícios</a>
+    <a href="/form.html" class="py-3 border-t border-[#1F4A5F]">Formulário</a>
+    <a href="#FAQ" class="py-3 border-t border-[#1F4A5F]">FAQ</a>
+  </div>
+
+</header>
+
+  <!-- HERO SECTION -->
+ <section class="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
+
+<!-- BACKGROUND ANIMATION -->
+<div class="hero-bg">
+<svg viewBox="0 0 1200 800">
+
+<ellipse cx="600" cy="400" rx="450" ry="250" class="orbit"></ellipse>
+<ellipse cx="600" cy="400" rx="350" ry="180" class="orbit delay1"></ellipse>
+<ellipse cx="600" cy="400" rx="250" ry="120" class="orbit delay2"></ellipse>
+
+</svg>
+</div>
+
+<!-- HERO CONTENT -->
+<div class="max-w-7xl mx-auto text-center relative z-10">
+    <!-- Animated Background Lines -->
+<div class="absolute inset-0 overflow-hidden opacity-30 pointer-events-none">
+
+<svg class="w-full h-full" viewBox="0 0 1200 800" fill="none">
+
+<path d="M0 200 C300 100 600 300 1200 150" stroke="white" stroke-width="1"
+class="lineAnim"/>
+
+<path d="M0 400 C400 250 800 500 1200 350" stroke="white" stroke-width="1"
+class="lineAnim"/>
+
+<path d="M0 600 C300 500 700 700 1200 550" stroke="white" stroke-width="1"
+class="lineAnim"/>
+
+</svg>
+
+</div>
+    <div class="max-w-7xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+        Domine Novas Stacks com<br/>
+        <span class="text-[black]">Pair Programming Real</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-[#A7BDC7] max-w-3xl mx-auto mb-10">
+        Saia da teoria e acelere sua senioridade. Conectamos você a outros desenvolvedores para codar e revisar projetos em conjunto.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#planos" class="bg-[#16A085] hover:bg-[#0E7C66] text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg">
+          Explorar Planos
+        </a>
+        <a href="#como-funciona" class="border-2 border-[#16A085] text-[#16A085] hover:bg-[#16A085] hover:text-white font-semibold px-8 py-4 rounded-lg transition-all">
+          Entenda o Método
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMS SECTION -->
+  <section class="py-24 px-6 bg-[#0B1F2E]/50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Desafios Comuns de Quem Aprende ou Trabalha Sozinho</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <!-- Pain Card 1 -->
+        <div class="bg-[#112B3C] p-8 rounded-xl border border-[#1F4A5F] hover:border-[#16A085] transition-all hover:-translate-y-2">
+          <h3 class="text-xl font-bold mb-3">Falta de feedback no código</h3>
+          <p class="text-[#A7BDC7]">Você escreve código mas não tem certeza se está seguindo boas práticas ou se há formas melhores de fazer.</p>
+        </div>
+        <!-- Pain Card 2 -->
+        <div class="bg-[#112B3C] p-8 rounded-xl border border-[#1F4A5F] hover:border-[#16A085] transition-all hover:-translate-y-2">
+          <h3 class="text-xl font-bold mb-3">Dificuldade em bugs complexos</h3>
+          <p class="text-[#A7BDC7]">Passa muito tempo travado em problemas que poderiam ser resolvidos mais rápido com um segundo olhar.</p>
+        </div>
+        <!-- Pain Card 3 -->
+        <div class="bg-[#112B3C] p-8 rounded-xl border border-[#1F4A5F] hover:border-[#16A085] transition-all hover:-translate-y-2">
+          <h3 class="text-xl font-bold mb-3">Falta prática real</h3>
+          <p class="text-[#A7BDC7]">Estuda muito mas sente que falta aplicar o conhecimento em situações reais e receber feedback.</p>
+        </div>
+        <!-- Pain Card 4 -->
+        <div class="bg-[#112B3C] p-8 rounded-xl border border-[#1F4A5F] hover:border-[#16A085] transition-all hover:-translate-y-2">
+          <h3 class="text-xl font-bold mb-3">Trabalha sem suporte técnico</h3>
+          <p class="text-[#A7BDC7]">É o único dev da empresa ou trabalha em time pequeno, sem acesso a code review ou discussões técnicas.</p>
+        </div>
+        <!-- Pain Card 5 -->
+        <div class="bg-[#112B3C] p-8 rounded-xl border border-[#1F4A5F] hover:border-[#16A085] transition-all hover:-translate-y-2">
+          <h3 class="text-xl font-bold mb-3">Insegurança sobre o nível</h3>
+          <p class="text-[#A7BDC7]">Não sabe se está pronto para o mercado ou se suas skills são adequadas para o nível que busca.</p>
+        </div>
+        <!-- Pain Card 6 -->
+        <div class="bg-[#112B3C] p-8 rounded-xl border border-[#1F4A5F] hover:border-[#16A085] transition-all hover:-translate-y-2">
+          <h3 class="text-xl font-bold mb-3">Aprendizado lento</h3>
+          <p class="text-[#A7BDC7]">Aprende principalmente com os próprios erros, sem ter com quem discutir ou validar decisões técnicas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<br><br><br><br><br><br><br><br>
+  <!-- HOW IT WORKS -->
+  <section id="como-funciona" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Como Funciona</h2>
+      <p class="text-xl text-[#A7BDC7] text-center max-w-3xl mx-auto mb-16">Conectamos você com outros devs para prática colaborativa e troca de conhecimento.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Step 1 -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-[#16A085] to-[#0E7C66] rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg shadow-[#16A085]/30">1</div>
+          <h3 class="text-xl font-bold mb-3">Entre na Comunidade</h3>
+          <p class="text-[#A7BDC7]">Preencha seu perfil com stack, nível e objetivos. Fazemos matching com devs compatíveis.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-[#16A085] to-[#0E7C66] rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg shadow-[#16A085]/30">2</div>
+          <h3 class="text-xl font-bold mb-3">Conecte com Outros Devs</h3>
+          <p class="text-[#A7BDC7]">Receba sugestões de parceiros para pair programming baseado em tecnologia e disponibilidade.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-[#16A085] to-[#0E7C66] rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg shadow-[#16A085]/30">3</div>
+          <h3 class="text-xl font-bold mb-3">Pratique e Receba Feedback</h3>
+          <p class="text-[#A7BDC7]">Participe de sessões de pair programming, compartilhe código para review, discuta soluções.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-[#16A085] to-[#0E7C66] rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-lg shadow-[#16A085]/30">4</div>
+          <h3 class="text-xl font-bold mb-3">Evolua Tecnicamente</h3>
+          <p class="text-[#A7BDC7]">Aprenda com feedback constante, veja diferentes abordagens, melhore seu código.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSFORMATION -->
+<section class="py-24 px-6 bg-[#0B1F2E]/50">
+  <div class="max-w-7xl mx-auto">
+    
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      Sua Jornada de Evolução
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Before -->
+      <div class="bg-[#112B3C] p-8 rounded-xl border border-red-500/20 
+      transition-all duration-300 transform
+      hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl hover:border-red-500">
+
+        <h3 class="text-2xl font-bold mb-6">
+          Como é hoje (Solo)
+        </h3>
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3">
+            <span class="text-[#FF3B30] text-xl">✕</span>
+            Dúvidas acumuladas por dias
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-[#FF3B30] text-xl">✕</span>
+            Insegurança ao subir um PR
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-[#FF3B30] text-xl">✕</span>
+            Solidão nas decisões técnicas
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-[#FF3B30] text-xl">✕</span>
+            Estagnação na mesma stack
+          </li>
+        </ul>
+      </div>
+
+      <!-- After -->
+      <div class="bg-[#112B3C] p-8 rounded-xl border border-green-500/20 
+      transition-all duration-300 transform
+      hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl hover:border-[#16A085]">
+
+        <h3 class="text-2xl font-bold mb-6">
+          Com o Hello World Club
+        </h3>
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3">
+            <span class="text-[#16A085] text-xl">✓</span>
+            Debug colaborativo em minutos
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-[#16A085] text-xl">✓</span>
+            Confiança através do Code Review
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-[#16A085] text-xl">✓</span>
+            Networking técnico de alto nível
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-[#16A085] text-xl">✓</span>
+            Domínio acelerado de novas tecnologias
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="beneficio" class="py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      O Que Você Ganha
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- For Beginners -->
+      <div class="bg-[#112B3C] p-8 rounded-xl border border-[#1F4A5F]
+      transition-all duration-300 transform
+      hover:-translate-y-2 hover:scale-[1.02]
+      hover:border-[#16A085] hover:shadow-2xl hover:shadow-[#16A085]/20">
+
+        <h3 class="text-2xl font-bold mb-6 text-[#16A085]">
+          Para Iniciantes
+        </h3>
+        <div class="space-y-6">
+          <div class="transition-all duration-200 hover:translate-x-2">
+            <h4 class="font-bold text-lg mb-1">Feedback Real no Seu Código</h4>
+            <p class="text-[#A7BDC7]">
+              Receba sugestões práticas de outros devs sobre como melhorar seus projetos.
+            </p>
+          </div>
+          <div class="transition-all duration-200 hover:translate-x-2">
+            <h4 class="font-bold text-lg mb-1">Prática de Pair Programming</h4>
+            <p class="text-[#A7BDC7]">
+              Aprenda a codar em dupla, uma skill valorizada no mercado.
+            </p>
+          </div>
+          <div class="transition-all duration-200 hover:translate-x-2">
+            <h4 class="font-bold text-lg mb-1">Network com Outros Devs</h4>
+            <p class="text-[#A7BDC7]">
+              Conheça pessoas na mesma jornada e construa conexões reais.
+            </p>
+          </div>
+          <div class="transition-all duration-200 hover:translate-x-2">
+            <h4 class="font-bold text-lg mb-1">Aplicação Prática</h4>
+            <p class="text-[#A7BDC7]">
+              Saia da teoria e pratique em situações reais com feedback imediato.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+     <!-- For Small Teams -->
+<div class="bg-[#112B3C] p-8 rounded-xl border-2 border-[#16A085]
+transition-all duration-300 transform
+hover:-translate-y-2 hover:scale-[1.02]
+hover:shadow-[0_0_35px_rgba(255,255,255,0.6)]">
+
+  <h3 class="text-2xl font-bold mb-6 text-[#16A085]">
+    Para Devs em Empresas Pequenas
+  </h3>
+  <div class="space-y-6">
+    <div class="transition-all duration-200 hover:translate-x-2">
+      <h4 class="font-bold text-lg mb-1">Segunda Opinião Técnica</h4>
+      <p class="text-[#A7BDC7]">
+        Valide decisões de arquitetura e abordagens com outros devs antes de implementar.
+      </p>
+    </div>
+    <div class="transition-all duration-200 hover:translate-x-2">
+      <h4 class="font-bold text-lg mb-1">Code Review Externo</h4>
+      <p class="text-[#A7BDC7]">
+        Tenha seu código revisado por outros desenvolvedores profissionais.
+      </p>
+    </div>
+    <div class="transition-all duration-200 hover:translate-x-2">
+      <h4 class="font-bold text-lg mb-1">Discussões Técnicas</h4>
+      <p class="text-[#A7BDC7]">
+        Converse sobre patterns, tecnologias e soluções de alto nível.
+      </p>
+    </div>
+    <div class="transition-all duration-200 hover:translate-x-2">
+      <h4 class="font-bold text-lg mb-1">Debug Colaborativo</h4>
+      <p class="text-[#A7BDC7]">
+        Resolva problemas complexos com ajuda de outro dev sênior.
+      </p>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ <!-- PLANS -->
+<section id="planos" class="py-24 px-6 bg-[#0B1F2E]/50">
+
+<div class="max-w-7xl mx-auto">
+
+<h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+Escolha seu Caminho
+</h2>
+
+<div class="flex flex-col md:flex-row gap-8 justify-center items-center">
+
+<!-- Free Plan -->
+
+<div class="bg-[#112B3C] p-8 rounded-xl border border-[#1F4A5F] text-center w-full max-w-md
+transition-all duration-300 transform
+hover:-translate-y-3 hover:scale-[1.03]
+hover:shadow-2xl hover:shadow-black/40
+hover:border-[#16A085]">
+
+<h3 class="text-2xl font-bold mb-4">
+Membro da Comunidade
+</h3>
+
+<p class="text-[#A7BDC7] mb-8">
+Gratuito - Networking e estudos coletivos.
+</p>
+
+<a href="https://discord.gg/Va6hDxfhS4"
+class="inline-block w-full bg-[#16A085] hover:bg-[#0E7C66]
+text-white font-semibold px-8 py-4 rounded-lg
+transition-all duration-300
+hover:scale-[1.02] hover:shadow-lg">
+
+Entrar na Comunidade
+</a>
+
+</div>
+
+
+<!-- Plus Plan (PREMIUM) -->
+
+<div class="bg-[#112B3C] p-8 rounded-xl border-2 border-[#16A085] text-center w-full max-w-md
+transition-all duration-500 transform
+shadow-[0_10px_40px_rgba(22,160,133,0.35)]
+hover:-translate-y-4 hover:scale-[1.06]
+hover:shadow-[0_20px_70px_rgba(22,160,133,0.7)]">
+
+<h3 class="text-2xl font-bold mb-4 text-[#16A085] tracking-wide">
+Se torne um Membro Plus
+</h3>
+
+<p class="text-[#A7BDC7] mb-8">
+Ideal para acelerar seu time ou carreira.
+</p>
+
+<a href="https://wa.me/5553984173352?text=Olá!%20Gostaria%20de%20receber%20um%20orçamento%20para%20o%20plano%20PJ."
+class="inline-block w-full bg-gradient-to-r from-[#16A085] to-[#1abc9c]
+text-white font-semibold px-8 py-4 rounded-lg
+transition-all duration-300
+hover:scale-[1.05]
+hover:shadow-[0_10px_30px_rgba(26,188,156,0.7)]">
+
+Pedir Orçamento
+
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+  <!-- FAQ -->
+  <section id="FAQ" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+      <div class="space-y-4">
+        <div class="bg-[#112B3C] p-6 rounded-lg border border-[#1F4A5F]">
+          <h3 class="font-bold text-lg mb-2">Preciso ser sênior?</h3>
+          <p class="text-[#A7BDC7]">Não! Temos devs de todos os níveis trocando experiências reais.</p>
+        </div>
+        <div class="bg-[#112B3C] p-6 rounded-lg border border-[#1F4A5F]">
+          <h3 class="font-bold text-lg mb-2">Como agendo as sessões?</h3>
+          <p class="text-[#A7BDC7]">Temos um processo que encontra parceiros de matching para sessão de pair programing se baseando na sua disponibilidade, stack e experiencia, porem tambem incentivamos que se conecte com outros devs da comunidade e interaja.</p>
+        </div>
+        <div class="bg-[#112B3C] p-6 rounded-lg border border-[#1F4A5F]">
+          <h3 class="font-bold text-lg mb-2">O plano Plus tem contrato?</h3>
+          <p class="text-[#A7BDC7]">Trabalhamos com modelos flexíveis para startups e empresas pequenas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM CTA -->
+
+<section id="formulario" class="py-24 px-6 bg-[#0B1F2E]/50">
+  <div class="max-w-5xl mx-auto text-center">
+
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+      Participe do Hello World Club
+    </h2>
+
+    <p class="text-xl text-[#A7BDC7] max-w-3xl mx-auto mb-10">
+      Quer encontrar parceiros para pair programming, receber feedback no seu código
+      e evoluir mais rápido como desenvolvedor?
+      Preencha o formulário para que possamos entender sua stack, experiência
+      e disponibilidade.
+    </p>
+
+    <div class="bg-[#112B3C] p-10 rounded-xl border border-[#1F4A5F] max-w-xl mx-auto">
+
+      <h3 class="text-2xl font-bold mb-4">
+        Preencher Formulário
+      </h3>
+
+      <p class="text-[#A7BDC7] mb-8">
+        Leva menos de 3 minutos.  
+        Usamos essas informações para encontrar parceiros compatíveis
+        para sessões de pair programming.
+      </p>
+
+      <a href="/form.html"
+      class="inline-block w-full bg-[#16A085] hover:bg-[#0E7C66] text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg">
+        Ir para o Formulário
+      </a>
+
+    </div>
+
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="bg-[#081821] py-8 px-6 border-t border-[#1F4A5F]">
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- LINKS ESQUERDA -->
+    <div class="flex flex-col md:items-start items-center gap-3 md:border-r border-[#1F4A5F] md:pr-10">
+
+      <h3 class="text-lg font-semibold text-white mb-2">
+        Navegação
+      </h3>
+
+      <a href="#como-funciona"
+      class="text-[#A7BDC7] transition-all duration-300 hover:text-[#16A085] hover:translate-x-1">
+        Método
+      </a>
+
+      <a href="#planos"
+      class="text-[#A7BDC7] transition-all duration-300 hover:text-[#16A085] hover:translate-x-1">
+        Planos
+      </a>
+
+      <a href="#beneficio"
+      class="text-[#A7BDC7] transition-all duration-300 hover:text-[#16A085] hover:translate-x-1">
+        Benefícios
+      </a>
+
+      <a href="/form.html"
+      class="text-[#A7BDC7] transition-all duration-300 hover:text-[#16A085] hover:translate-x-1">
+        Formulário
+      </a>
+
+      <a href="#FAQ"
+      class="text-[#A7BDC7] transition-all duration-300 hover:text-[#16A085] hover:translate-x-1">
+        FAQ
+      </a>
+
+    </div>
+
+
+    <!-- TEXTO DIREITA -->
+    <div class="text-center md:text-right space-y-3">
+
+      <p class="text-[#A7BDC7] transition-all duration-300
+      hover:text-white hover:tracking-wide
+      hover:drop-shadow-[0_0_6px_rgba(22,160,133,0.7)]">
+        Hello World Club © 2026 | Conectando mentes, construindo softwares.
+      </p>
+
+      <div class="flex items-center justify-center md:justify-end gap-2">
+
+  <p class="text-xs text-green-500 transition-all duration-300
+  hover:text-[#16A085] hover:scale-105
+  hover:drop-shadow-[0_0_8px_rgba(22,160,133,0.8)]">
+    Front-End Feito por Thiago Pucinelli Aires da Silva
+  </p>
+
+  <a href="https://www.linkedin.com/in/thiagopucinelli"
+  target="_blank"
+  class="transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_rgba(22,160,133,0.9)]">
+
+    <!-- LinkedIn Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="#0A66C2"
+    class="w-5 h-5">
+
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.026-3.036-1.851-3.036-1.851 0-2.134 1.445-2.134 2.939v5.666H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.851 3.369-1.851 3.604 0 4.269 2.372 4.269 5.455v6.287zM5.337 7.433a2.063 2.063 0 110-4.126 2.063 2.063 0 010 4.126zM7.119 20.452H3.555V9h3.564v11.452z"/>
+      
+    </svg>
+
+  </a>
+
+</div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Front-End Feito por Thiago Pucinelli Aires da Silva (www.linkedin.com/in/thiagopucinelli) -->
+
+  <script>
+
+/* hamburger */
+
+const hamburger=document.getElementById("hamburger")
+const mobileMenu=document.getElementById("mobileMenu")
+
+hamburger.onclick=()=>{
+
+hamburger.classList.toggle("open")
+mobileMenu.classList.toggle("hidden")
+
+}
+
+
+/* scroll animation */
+
+function reveal(){
+
+document.querySelectorAll(".reveal").forEach(el=>{
+
+const windowHeight=window.innerHeight
+const elementTop=el.getBoundingClientRect().top
+const visible=120
+
+if(elementTop<windowHeight-visible){
+
+el.classList.add("active")
+
+}
+
+})
+
+}
+
+window.addEventListener("scroll",reveal)
+
+reveal()
+
+</script>
+
+</body>
+</html>
